@@ -14,6 +14,12 @@ const loadImages = (numImages= 10) => {
         })
         i++;
     }
-}
+};
 
 loadImages();
+
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
+        loadImages();
+    }
+});
