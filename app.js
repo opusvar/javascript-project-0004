@@ -2,7 +2,7 @@ console.log("script connected")
 
 const container = document.querySelector('.container');
 
-const loadImages = (numImages= 10) => {
+const loadImages = (numImages= 20) => {
     let i=0;
     while (i < numImages) {
         fetch('https://dog.ceo/api/breeds/image/random')
@@ -14,12 +14,12 @@ const loadImages = (numImages= 10) => {
         })
         i++;
     }
-};
+}
 
 loadImages();
 
 window.addEventListener('scroll', ()=>{
-    if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
-        loadImages();
+    if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
+    loadImages();
     }
-});
+})
