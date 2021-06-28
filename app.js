@@ -1,6 +1,8 @@
+console.log("script connected")
+
 const container = document.querySelector('.container');
 
-loadImages(numImages= 10) {
+const loadImages = (numImages= 10) => {
     let i=0;
     while (i < numImages) {
         fetch('https://dog.ceo/api/breeds/image/random')
